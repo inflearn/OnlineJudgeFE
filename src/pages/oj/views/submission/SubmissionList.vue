@@ -197,7 +197,7 @@
                       })
                   }
                 }
-              }, params.row.username)
+              }, params.row.real_name)
             }
           }
         ],
@@ -222,7 +222,6 @@
     },
     methods: {
       init () {
-        console.log('init')
         this.contestID = this.$route.params.contestID
         let query = this.$route.query
         this.problemID = query.problemID

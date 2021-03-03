@@ -241,7 +241,7 @@ export const m = {
   ID: 'ID',
   Time: 'Time',
   Memory: 'Memory',
-  Author: 'Author',
+  Author: '닉네임',
   Option: 'Option',
   Mine: 'Mine',
   Search_Author: 'Search Author',
