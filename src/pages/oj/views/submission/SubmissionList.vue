@@ -122,7 +122,7 @@
                     }
                   }
                 },
-              params.row.contest)
+              params.row.contest_title)
             }
           },
           {
@@ -157,7 +157,7 @@
                     }
                   }
                 },
-                params.row.problem)
+                params.row.problem_title)
             }
           },
           {

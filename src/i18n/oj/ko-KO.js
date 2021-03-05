@@ -115,6 +115,7 @@ export const m = {
   Problems: '문제',
   Announcements: '공지사항',
   Submissions: '결과',
+  Problem_Submissions: '결과',
   Rankings: '랭킹',
   Overview: 'Overview',
   Admin_Helper: 'Admin Helper',
