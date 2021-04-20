@@ -128,5 +128,6 @@ export const m = {
   Welcome_to_Login: '지식 공유자 및 어드민 만이 로그인이 가능합니다.',
   GO: 'GO',
   username: 'username',
-  password: 'password'
+  password: 'password',
+  Add_Problem: '문제 만들기'
 }
