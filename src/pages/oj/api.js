@@ -240,6 +240,13 @@ export default {
       }
     })
   },
+  submissionOJRejudge (id) {
+    return ajax('submission/rejudge', 'get', {
+      params: {
+        id
+      }
+    })
+  },
   updateSubmission (data) {
     return ajax('submission', 'put', {
       data

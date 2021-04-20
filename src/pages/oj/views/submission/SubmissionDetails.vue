@@ -28,6 +28,16 @@
       <Col :span="20">
         <Highlight :code="submission.code" :language="submission.language" :border-color="status.color"></Highlight>
       </Col>
+     <!--  재채점하기 -->
+      <Col :span="20">
+        <div id="share-btn">
+          <Button v-if="!isResult" type="warning" size="large" @click="reJudge">
+            재채점하기
+          </Button>
+        </div>
+      </Col>
+
+
 <!--      //공유 버튼 제거-->
 <!--      <Col v-if="submission.can_unshare" :span="20">-->
 <!--        <div id="share-btn">-->
@@ -88,8 +98,6 @@ export default {
                     }
                   }
                 }, '채점 결과 보기')
-              } else {
-  
               }
             }
           },
@@ -136,7 +144,8 @@ export default {
           }
         },
         isConcat: false,
-        loading: false
+        loading: false,
+        isResult: false
       }
     },
     mounted () {
@@ -153,6 +162,9 @@ export default {
           this.loading = false
           let data = res.data.data
           if (data.info && data.info.data && !this.isConcat) {
+            if (data.info.data[0].case_input && (data.result === -1 || data.result === 0)) {
+              this.isResult = true
+            }
             // score exist means the submission is OI problem submission
             if (data.info.data[0].score !== undefined) {
               this.isConcat = true
@@ -194,6 +206,21 @@ export default {
           this.getSubmission()
           this.$success(this.$i18n.t('m.Succeeded'))
         }, () => {
+        })
+      },
+      reJudge () {
+        this.$Modal.confirm({
+          title: '재채점 안내',
+          content: `<pre style="margin: 0; font-size: 1.1em; margin-top: -10px;">현재문제에 채점파일을 기준으로 재채점되기 때문에,
+채점파일이 변경된 경우 이전과 다르게 채점될수 있습니다.</pre>`,
+          onOk: () => {
+            api.submissionOJRejudge(this.submission.id).then(res => {
+              this.$Message.info('재채첨을 요청 하였습니다. 잠시후 다시 확인해주세요.')
+            })
+          },
+          onCancel: () => {
+            this.$Message.info('재채첨을 취소 하였습니다.')
+          }
         })
       }
     },

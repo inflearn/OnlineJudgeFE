@@ -1,6 +1,6 @@
 <template>
   <div class="view">
-    <Panel title="Contest List">
+    <Panel title="문제집 목록">
       <div slot="header">
         <el-input
           v-model="keyword"

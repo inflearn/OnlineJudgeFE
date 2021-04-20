@@ -246,7 +246,7 @@ export const m = {
   Option: 'Option',
   Mine: 'Mine',
   Search_Author: 'Search Author',
-  Accepted: 'Accepted',
+  Accepted: '정답입니다.',
   Time_Limit_Exceeded: 'Time Limit Exceeded',
   Memory_Limit_Exceeded: 'Memory Limit Exceeded',
   Runtime_Error: 'Runtime Error',

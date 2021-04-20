@@ -104,7 +104,7 @@ export const m = {
   New_Tag: 'Tag 추가',
   // ProblemList.vue
   // Contest_Problem_List: '강의 문제 리스트',
-  Contest_Problem_List: 'Contest Problem List',
+  Contest_Problem_List: '문제집 문제 리스트',
   // Contest.vue
   Contest_MainTitle: '문제집 만들기',
   ContestTitle: '제목',

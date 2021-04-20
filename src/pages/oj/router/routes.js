@@ -72,7 +72,7 @@ export default [
   {
     name: 'contest-list',
     path: '/contest',
-    meta: {title: 'Contest List'},
+    meta: {title: '문제집 목록'},
     component: Contest.ContestList
   },
   {

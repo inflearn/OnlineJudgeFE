@@ -22,6 +22,7 @@ export default {
       t.select()
       document.execCommand('copy')
       document.body.removeChild(t)
+      this.$Message.success(`🖨  ${this.title} 값이 복사 되었습니다! 🖨`)
     }
   }
 }
