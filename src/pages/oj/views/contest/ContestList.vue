@@ -40,7 +40,7 @@
       <ol id="contest-list">
         <li v-for="contest in contests" :key="contest.title">
           <Row type="flex" justify="space-between" align="middle">
-            <img class="trophy" src="../../../../assets/Cup.png"/>
+            <img class="trophy" src="../../../../assets/logo3.png"/>
             <Col :span="18" class="contest-main">
             <p class="title">
               <a class="entry" @click.stop="goContest(contest)">
