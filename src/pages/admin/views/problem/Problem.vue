@@ -163,11 +163,12 @@
             </el-col>
           </el-row>
         </el-form-item>
-        <el-form-item :label="$t('m.Special_Judge')" :error="error.spj">
-          <el-col :span="24">
-            <el-checkbox v-model="problem.spj" @click.native.prevent="switchSpj()">{{$t('m.Use_Special_Judge')}}</el-checkbox>
-          </el-col>
-        </el-form-item>
+<!--        스페셜저지-->
+<!--        <el-form-item :label="$t('m.Special_Judge')" :error="error.spj">-->
+<!--          <el-col :span="24">-->
+<!--            <el-checkbox v-model="problem.spj" @click.native.prevent="switchSpj()">{{$t('m.Use_Special_Judge')}}</el-checkbox>-->
+<!--          </el-col>-->
+<!--        </el-form-item>-->
         <el-form-item v-if="problem.spj">
           <Accordion :title="$t('m.Special_Judge_Code')">
             <template slot="header">
@@ -209,14 +210,15 @@
             </el-form-item>
           </el-col>
 
-          <el-col :span="6">
-            <el-form-item :label="$t('m.IOMode')">
-              <el-radio-group v-model="problem.io_mode.io_mode">
-                <el-radio label="Standard IO">Standard IO</el-radio>
-                <el-radio label="File IO">File IO</el-radio>
-              </el-radio-group>
-            </el-form-item>
-          </el-col>
+<!--          IO 모드-->
+<!--          <el-col :span="6">-->
+<!--            <el-form-item :label="$t('m.IOMode')">-->
+<!--              <el-radio-group v-model="problem.io_mode.io_mode">-->
+<!--                <el-radio label="Standard IO">Standard IO</el-radio>-->
+<!--                <el-radio label="File IO">File IO</el-radio>-->
+<!--              </el-radio-group>-->
+<!--            </el-form-item>-->
+<!--          </el-col>-->
 
           <el-col :span="4" v-if="problem.io_mode.io_mode == 'File IO'">
             <el-form-item :label="$t('m.InputFileName')" required>

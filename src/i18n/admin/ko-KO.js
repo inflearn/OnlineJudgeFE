@@ -66,7 +66,7 @@ export const m = {
   // PruneTestCase
   Test_Case_Prune_Test_Case: '테스트 케이스 가지치기',
   // Problem.vue
-  Display_ID: '번호',
+  Display_ID: 'Display_ID',
   Title: '제목',
   Description: '설명',
   Input_Description: '입력 설명',
@@ -74,7 +74,7 @@ export const m = {
   Time_Limit: '시간 제한',
   Memory_limit: '메모리 제한',
   Difficulty: '난이도',
-  Visible: '보이기 설정',
+  Visible: '유저 공개 설정',
   Languages: '언어',
   Input_Samples: '입력 예시',
   Output_Samples: '출력 예시',
