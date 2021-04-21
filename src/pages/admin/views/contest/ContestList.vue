@@ -143,7 +143,7 @@
           this.loading = false
           this.total = res.data.data.total
           this.contestList = res.data.data.results
-        }, _ => {
+        }, res => {
           this.loading = false
         })
       },
