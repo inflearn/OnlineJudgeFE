@@ -16,10 +16,10 @@
         style="width: 100%">
         <el-table-column type="expand">
           <template slot-scope="props">
-            <p>Start Time: {{props.row.start_time | localtime }}</p>
-            <p>End Time: {{props.row.end_time | localtime }}</p>
-            <p>Create Time: {{props.row.create_time | localtime}}</p>
-            <p>Creator: {{props.row.created_by.username}}</p>
+            <p>제작 시간: {{props.row.start_time | localtime }}</p>
+<!--            <p>End Time: {{props.row.end_time | localtime }}</p>-->
+<!--            <p>Create Time: {{props.row.create_time | localtime}}</p>-->
+            <p>제작자 아이디: {{props.row.created_by.username}}</p>
           </template>
         </el-table-column>
         <el-table-column
@@ -143,7 +143,7 @@
           this.loading = false
           this.total = res.data.data.total
           this.contestList = res.data.data.results
-        }, res => {
+        }, _ => {
           this.loading = false
         })
       },
