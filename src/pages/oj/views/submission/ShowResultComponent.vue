@@ -1,8 +1,8 @@
 <template>
   <div>
-    <result-card-component title='입력소스' v-bind:code="input"></result-card-component>
-    <result-card-component title='출력소스' v-bind:code="result"></result-card-component>
-    <result-card-component title='결과소스' v-bind:code="output"></result-card-component>
+    <result-card-component title='입력값' v-bind:code="input"></result-card-component>
+    <result-card-component title='리턴값' v-bind:code="result"></result-card-component>
+    <result-card-component title='정답값' v-bind:code="output"></result-card-component>
   </div>
 </template>
 <script>
