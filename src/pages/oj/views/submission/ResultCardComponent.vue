@@ -12,8 +12,6 @@
 export default {
   name: 'result-card-component',
   props: ['title', 'code'],
-  data () {
-  },
   methods: {
     copy () {
       const t = document.createElement('textarea')
